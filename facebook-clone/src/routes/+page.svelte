@@ -1,4 +1,3 @@
-
 <script>
     let posts = [
       {
@@ -12,16 +11,6 @@
       // Add more post objects here
     ];
   </script>
-
-<div class="header">
-    <div class="main-header">
-        
-        <div class="title">
-           Not Facebook 
-        </div>
-    </div>
-</div>
-
 
 
 <div class="feed">
@@ -47,7 +36,7 @@
     {/each}
   </div>
 
-<style>
+  <style>
     /* Add your CSS styling here to make it look sleek */
     .feed {
       max-width: 600px;
@@ -115,13 +104,5 @@
       color: #ff4500;
     }
 
-    .main-header{
-        background-color: #519df4;
-        padding: 2rem;
-    }
-
-    .title{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 4rem;
-    }
+    
   </style>
