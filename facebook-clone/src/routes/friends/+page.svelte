@@ -4,10 +4,16 @@
 </script>
 <h1> Friends </h1>
 <body>  </body>
+
+<div class="button">
+  <span class="plus">+</span>
+  <span class="text">Add Friend</span>
+</div>
+
 <style>
     h1 {
         font-size: 3em ;
-        font-family: 'Fantasy', cursive;
+        font-family: 'Fantasy', 'Times New Roman', Times, serif;
         color: black;
     }
     body {
@@ -63,6 +69,38 @@
     .friend:not(.selected):hover {
         background: #DDD;
     }
+    .button {
+    background-color: rgb(78, 180, 203);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    overflow: hidden;
+    cursor: pointer;
+    color: #fff;
+   }
+   .plus, .text {
+    position: absolute;
+    transition: .3s;
+   }
+   .button:hover {
+    width: 100px;
+    transition: .3s;
+   }
+   .button:hover .plus {
+    opacity: 0;
+    transition: .3s;
+   }
+   .text {
+    opacity: 0;
+   }
+   .button:hover .text {
+    opacity: 1;
+    transition: .3s;
+   }
 </style>
 
 <ul id='friend-list'>
