@@ -13,6 +13,8 @@
   </script>
 
 
+
+
 <div class="feed">
     {#each posts as post (post.id)}
       <div class="post" key={post.id}>
@@ -34,6 +36,10 @@
         </div>
       </div>
     {/each}
+  </div>
+
+  <div class ="create-post">
+    <button class="create-post-button">Create Post</button>
   </div>
 
   <style>
@@ -102,6 +108,20 @@
   
     .like-icon {
       color: #ff4500;
+    }
+
+    .create-post-button {
+      background-color : #31B0D5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      border-color: #46b8da;
+   }
+
+   .create-post{
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
     }
 
     
