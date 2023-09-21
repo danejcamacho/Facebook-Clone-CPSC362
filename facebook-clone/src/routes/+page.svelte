@@ -2,7 +2,7 @@
     let posts = [
       {
         id: 1,
-        author: 'Mike Hawk',
+        author: 'Joseph Mama',
         timestamp: '2 hours ago',
         content: 'Hello, Svelte World!',
         likes: 10,
