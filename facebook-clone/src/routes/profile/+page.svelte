@@ -13,7 +13,7 @@
                 </div>
     
                 <div class="profile-header-info">
-                    <h4 class="m-t-sm">Mike Hawk</h4>
+                    <h4 class="m-t-sm">Joseph Mama</h4>
                     <p class="m-b-sm">UXUI + Frontend Developer</p>
                     <a href="#" class="btn btn-xs btn-primary mb-2">Edit Profile</a>
                 </div>

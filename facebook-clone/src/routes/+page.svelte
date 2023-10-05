@@ -1,3 +1,4 @@
+
 <script>
     let posts = [
       {
@@ -39,7 +40,10 @@
   </div>
 
   <div class ="create-post">
-    <button class="create-post-button">Create Post</button>
+    <a href ="/create_post">
+      <button class="create-post-button">Create Post</button>
+    </a>
+    
   </div>
 
   <style>
