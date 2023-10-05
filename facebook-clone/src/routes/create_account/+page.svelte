@@ -1,36 +1,52 @@
 <script>
-  
+    let username = null;
+    let password = null;
+
+    const handleSubmit = () => {
+        if (username != null && password != null){
+            console.log(username,password)
+        }
+    }
+    
 </script>
 
-<main>
+<main class="create-acc-struct">
+
 <!-- Body to explain website? idk -->
   <div class='side-body'>
     <h1 id='side-header'>Not really Facebook</h1>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam velit, reiciendis provident perferendis dicta officiis est in? Nemo blanditiis natus non praesentium recusandae aliquid commodi corporis, cum sapiente rem facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid atque architecto exercitationem rerum obcaecati dolore nostrum, ab temporibus sunt necessitatibus provident sit ullam in facere, excepturi beatae mollitia quis! 
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam velit, reiciendis provident perferendis dicta officiis est in? Nemo blanditiis natus non praesentium recusandae aliquid commodi corporis, cum sapiente rem facere.
   </div>
 
 <!-- Patch API Call at some point -->
   <div class='form-body'>   
-    <h1 id='form-header'>Create Account!</h1>
-      <form class="my-form">
+    <h1 class='form-header'>Create Account!</h1>
+
+      <form class="my-form" on:submit|preventDefault={handleSubmit}>
+
         <div class="form-group">
             <!-- svelte-ignore a11y-label-has-associated-control -->
             <label class='form-labels'>Username: </label>
-            <input class='text-input' type="text" name="name">
+            <input class='text-input' type="text" bind:value={username}>
         </div>
+        
         <div class="form-group">
             <!-- svelte-ignore a11y-label-has-associated-control -->
             <label class='form-labels'>Password: </label>
-            <input class='text-input' type="password" name="password">
+            <input class='text-input' type="password" bind:value={password}>
         </div>
+
         <div class="form-group">
             <label for="file-upload" class="pfp-file-upload">
               Profile Picture (Optional)
             </label>
             <input id="file-upload" type="file"/>
         </div>
-        <input class="button" type='submit' value="Create Account" name="create_acc">
+
+        <input class="button" type='submit' value="Create Account">
       </form>
+
+
       <div>
         <a class='login-link' href="/login">Already have an account?</a>
       </div>
@@ -38,21 +54,13 @@
 </main>
 
 <style>
-  main {
+  .create-acc-struct {
     color:#555555;
     line-height: 2em;
     font-size: 18px;
-    width: 85%;
+    width: 85vw;
     padding-top: 2%;
     margin:auto; 
-  }
-
-  a:active{
-    color: #333;
-  }
-
-  a::backdrop{
-    color: #333;
   }
 
   .side-body{
@@ -61,19 +69,23 @@
     background-color: #333;
     color: #ffffff;
     padding: 15px;
+    padding-bottom: 100px;
     font-size: xx-large;
   }
 
   .form-body{
     float:right;
     width:40%;
-    font-size: xx-large;
+    font-size: x-large;
   }
   
   #side-header{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
+/* .form-header{
+  font-size: xx-large;
+} */
 .form-group{
   padding: 8px;
 }
@@ -93,7 +105,6 @@
 
 .login-link{
   font-size: medium;
-  padding-left: 2%;
   color: black;
 }
 
@@ -107,7 +118,7 @@
    padding: 10px 15x; 
    height: 40px;
    float: right; 
-   width: 70%;
+   width: 60%;
  } 
 
 .button:hover{
