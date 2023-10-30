@@ -1,10 +1,16 @@
 <script>
-    let username = null;
-    let password = null;
-
+    let user = {
+      username: null,
+      password: null,
+      pfp: null
+    }
+    
+    const validSubmitCheck = () => {
+      null  
+    }
     const handleSubmit = () => {
-        if (username != null && password != null){
-            console.log(username,password)
+        if (user.username != null && user.password != null){
+            console.log(user.username, user.password)
         }
     }
     
@@ -27,13 +33,13 @@
         <div class="form-group">
             <!-- svelte-ignore a11y-label-has-associated-control -->
             <label class='form-labels'>Username: </label>
-            <input class='text-input' type="text" bind:value={username}>
+            <input class='text-input' type="text" bind:value={user.username}>
         </div>
         
         <div class="form-group">
             <!-- svelte-ignore a11y-label-has-associated-control -->
             <label class='form-labels'>Password: </label>
-            <input class='text-input' type="password" bind:value={password}>
+            <input class='text-input' type="password" bind:value={user.password}>
         </div>
 
         <div class="form-group">
@@ -69,14 +75,14 @@
     background-color: #333;
     color: #ffffff;
     padding: 15px;
-    padding-bottom: 100px;
-    font-size: xx-large;
+    padding-bottom: 150px;
+    font-size: x-large;
   }
 
   .form-body{
     float:right;
     width:40%;
-    font-size: x-large;
+    font-size: large;
   }
   
   #side-header{
