@@ -9,7 +9,24 @@
         likes: 10,
         comments: 5,
       },
-      // Add more post objects here
+      {
+        id: 2,
+        author: 'John Doe',
+        timestamp: '3 hours ago',
+        content: 'This is a post on Not Facebook',
+        likes: 20,
+        comments: 2
+
+      },
+      {
+        id: 3,
+        author: 'John Doe',
+        timestamp: '3 hours ago',
+        content: 'And Here is another one',
+        likes: 20,
+        comments: 2
+
+      }
     ];
   </script>
 

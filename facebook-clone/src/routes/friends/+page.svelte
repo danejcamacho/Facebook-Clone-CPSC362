@@ -7,7 +7,7 @@
 
 <div class="button">
   <span class="plus">+</span>
-  <span class="text">Add Friend</span>
+  <a href="/add_friend"><span class= "text">Add Friend</span></a>
 </div>
 
 <style>
