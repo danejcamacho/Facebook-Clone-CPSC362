@@ -1,40 +1,34 @@
 
 <script>
-    let posts = [
-      {
-        id: 1,
-        author: 'Joseph Mama',
-        timestamp: '2 hours ago',
-        content: 'Hello, Svelte World!',
-        likes: 10,
-        comments: 5,
-      },
-      {
-        id: 2,
-        author: 'John Doe',
-        timestamp: '3 hours ago',
-        content: 'This is a post on Not Facebook',
-        likes: 20,
-        comments: 2
+  let posts = [];
 
-      },
-      {
-        id: 3,
-        author: 'John Doe',
-        timestamp: '3 hours ago',
-        content: 'And Here is another one',
-        likes: 20,
-        comments: 2
+    let author = '';
+    let content = '';
 
-      }
-    ];
-  </script>
+
+    const addPost = () => {
+      const d = new Date();
+      const fullDateTime = `${d.getMonth()+1}/${d.getDate()}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`;
+      let post = {
+        id: 0,
+        author: author,
+        timestamp: fullDateTime,
+        content: content,
+        likes: 0,
+        comments: 0
+      };
+      posts = [...posts, post];
+      author = '';
+      content = '';
+    }
+    
+</script>
 
 
 
 
 <div class="feed">
-    {#each posts as post (post.id)}
+    {#each posts as post}
       <div class="post" key={post.id}>
         <div class="post-header">
           <div class="avatar"></div>
@@ -57,9 +51,11 @@
   </div>
 
   <div class ="create-post">
-    <a href ="/create_post">
-      <button class="create-post-button">Create Post</button>
-    </a>
+    <h1>Create a Post!</h1>
+    <input type="text" placeholder="put your name here" bind:value={author} />
+    <input type="text" placeholder="put content here" bind:value={content} />
+    <button on:click={addPost}> Submit </button>
+    
     
   </div>
 
