@@ -39,7 +39,7 @@
   <div class="form-body">
     <h1 class="form-header">Create Account!</h1>
 
-    <form class="my-form" action="http://localhost:5173/" method="get">
+    <form class="my-form" action="https://facebook-clone-cpsc-362.vercel.app/" method="get">
       <div class="form-group">
         <!-- svelte-ignore a11y-label-has-associated-control -->
         <label class="form-labels">Username: </label>
