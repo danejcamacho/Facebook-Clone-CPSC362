@@ -16,7 +16,7 @@
     <form
       class="log-form-group"
       method="get"
-      action="http://localhost:5173/"
+      action="https://facebook-clone-cpsc-362.vercel.app"
     >
       <div class="username">
         <label for="user-input">Username</label>
